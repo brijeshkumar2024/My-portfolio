@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Qualifications</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #1a202c;
+            color: white;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background-color: #2d3748;
+            padding: 20px 0;
+            text-align: center;
+        }
+        header h1 {
+            color: #e2e8f0;
+            font-size: 2.5rem;
+            text-transform: uppercase;
+        }
+        section {
+            padding: 40px;
+            text-align: center;
+        }
+        .qualification-list {
+            max-width: 600px;
+            margin: 0 auto;
+            text-align: left;
+            font-size: 1.2rem;
+            color: #e2e8f0;
+        }
+        .qualification-item {
+            padding: 10px 0;
+            border-bottom: 1px solid #4a5568;
+        }
+        .qualification-item:last-child {
+            border-bottom: none;
+        }
+        .back-button {
+            background-color: #38a169;
+            padding: 10px 20px;
+            color: white;
+            border-radius: 5px;
+            height: 10%;
+            text-decoration: none;
+            font-size: 1.2rem;
+        }
+        .back-button:hover {
+            background-color: #2f855a;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header Section -->
+    <header>
+        <h1>My Qualifications</h1>
+    </header>
+
+    <!-- Qualifications Section -->
+    <section>
+        <h2 class="text-3xl font-bold text-green-500">Educational Background</h2>
+        <ul class="qualification-list">
+            <li class="qualification-item">B.Tech from C.V. Raman Global University</li>
+            <li class="qualification-item">Higher Secondary from SCS Autonomous College</li>
+            <li class="qualification-item">Secondary from D.A.V Public School</li>
+        </ul>
+
+        <!-- Back Button -->
+        <a href="about.html" class="back-button mt-8">Back to Home</a>
+    </section>
+
+</body>
+</html>

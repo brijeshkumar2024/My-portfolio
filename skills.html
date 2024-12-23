@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Skills - Brijesh's Portfolio</title>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <style>
+    body {
+      background: linear-gradient(135deg, #1a202c, #4a5568);
+      color: white;
+      font-family: 'Helvetica Neue', Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+
+    header {
+      background-color: #2d3748;
+      padding: 40px 20px;
+      text-align: center;
+    }
+
+    header h1 {
+      color: #ecfdf5;
+      font-size: 3.5rem;
+      text-transform: uppercase;
+      letter-spacing: 4px;
+    }
+
+    section {
+      padding: 60px 20px;
+      text-align: center;
+    }
+
+    .skills-card, .achievements {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 30px;
+      background-color: #2d3748;
+      border-radius: 12px;
+      box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3);
+      transition: transform 0.3s ease;
+    }
+
+    .skills-card:hover, .achievements:hover {
+      transform: translateY(-10px);
+    }
+
+    .skills-list {
+      margin-top: 20px;
+      text-align: left;
+      list-style: none;
+      padding: 0;
+    }
+
+    .skills-list li {
+      font-size: 1.2rem;
+      color: #e2e8f0;
+      padding: 10px 0;
+      border-bottom: 1px solid #4a5568;
+    }
+
+    .skills-list li:last-child {
+      border-bottom: none;
+    }
+
+    footer {
+      text-align: center;
+      margin-top: 40px;
+    }
+
+    footer a {
+      text-decoration: none;
+      color: #9b83d3;
+      font-size: 1.2rem;
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Header Section -->
+  <header>
+    <h1>My Skills</h1>
+  </header>
+
+  <!-- Skills Section -->
+  <section>
+    
+    <br>
+    <div class="skills-card">
+      <h2>Hard Skills</h2>
+      <ul class="skills-list">
+        <li>Web Development (HTML, CSS, JavaScript)</li>
+        <li>Full-Stack Development</li>
+        <li>Python Programming</li>
+        <li>Node.js</li>
+        <li>Autocad</li>
+        <li>C , C++ Programming</li>
+        <li>Java Programming </li>
+        <li>Database Management (SQL, MongoDB)</li>
+        <li>Version Control (Git/GitHub)</li>
+      </ul>
+    </div>
+      <br>
+      <div class="skills-card">
+        <h2>Soft Skills</h2>
+        <ul class="skills-list">
+          <li>Leadership</li>
+          <li>Problem-Solving</li>
+          <li>Communication</li>
+          <li>Teamwork</li>
+          <li>Adaptability</li>
+          <li>Critical Thinking</li>
+          <li>Time Management</li>
+        </ul>
+      
+    </div>
+    <br>
+  </section>
+
+  <!-- Achievements Section -->
+  <section id="achievements">
+    <div class="achievements">
+      <h2>Achievements</h2>
+      <ul class="skills-list">
+        <li>Member of ISET</li>
+        <li>Member of Cyber Security Club</li>
+        <li>Completed an Aspiring Leadership Program</li>
+        <li>Participated in more than 40 hackathons</li>
+        <li>Recognized for outstanding performance in a group project at university</li>
+        <li>Active Student Coordinator</li>
+        <li>Class Representative</li>
+        
+      </ul>
+    </div>
+  </section>
+
+  <!-- Back Button -->
+  <footer>
+    <a href="about.html" class="back-button mt-8">Back to Home</a>
+  </footer>
+
+  <!-- GSAP Animations -->
+  <script>
+    gsap.fromTo(".skills-card, .achievements", 
+      { opacity: 0, scale: 0.8 },
+      { opacity: 1, scale: 1, duration: 1, stagger: 0.3 }
+    );
+  </script>
+
+</body>
+</html>

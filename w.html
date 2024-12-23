@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>View My Work - Brijesh's Portfolio</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <style>
+    /* Global Styles */
+    body {
+      font-family: 'Inter', sans-serif;
+      background: #121212;
+      color: #f5f5f5;
+      margin: 0;
+      padding: 0;
+      line-height: 1.6;
+    }
+
+    /* Header Styling */
+    header {
+      background: linear-gradient(145deg, #1a202c, #2d3748);
+      color: #fff;
+      text-align: center;
+      padding: 5rem 2rem;
+      box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2);
+    }
+
+    header h1 {
+      font-size: 3rem;
+      font-weight: 700;
+      letter-spacing: 1px;
+      margin-bottom: 1rem;
+    }
+
+    header p {
+      font-size: 1.25rem;
+      color: #9b9b9b;
+      font-weight: 300;
+    }
+
+    /* Section Styling */
+    .work-section {
+      padding: 4rem 2rem;
+      text-align: center;
+    }
+
+    .work-section h2 {
+      font-size: 2.5rem;
+      color: #a0aec0;
+      font-weight: 600;
+      margin-bottom: 2rem;
+    }
+
+    .work-description {
+      font-size: 1.2rem;
+      color: #b0b7c3;
+      margin-bottom: 2.5rem;
+      width: 85%;
+      line-height: 1.8;
+      margin: 0 auto;
+    }
+
+    /* Work Links Grid */
+    .work-links {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+      gap: 2.5rem;
+      margin-top: 3rem;
+      justify-items: center;
+    }
+
+    .work-links a {
+      background: #2b2d3d;
+      color: #fff;
+      padding: 2.5rem;
+      border-radius: 10px;
+      text-decoration: none;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      box-shadow: 0px 15px 30px rgba(0, 0, 0, 0.15);
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      height: 100%;
+    }
+
+    .work-links a:hover {
+      transform: translateY(-10px);
+      box-shadow: 0px 25px 45px rgba(0, 0, 0, 0.25);
+    }
+
+    .work-links a h3 {
+      font-size: 1.5rem;
+      font-weight: 600;
+      color: #e2e8f0;
+      margin-bottom: 1rem;
+    }
+
+    .work-links a p {
+      font-size: 1.125rem;
+      color: #cbd5e0;
+      margin-bottom: 1.5rem;
+    }
+
+    /* Check Now Button Styling */
+    .check-now-btn {
+      background: #9b4dca;
+      color: #fff;
+      padding: 0.75rem 1.5rem;
+      border-radius: 5px;
+      text-align: center;
+      font-size: 1.125rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      transition: background-color 0.3s ease, transform 0.3s ease;
+      display: inline-block;
+      margin-top: auto;
+    }
+
+    .check-now-btn:hover {
+      background-color: #7b3e9f;
+      transform: translateY(-5px);
+    }
+
+    /* Footer Section */
+    footer {
+      background: #1a202c;
+      color: #9b9b9b;
+      padding: 3rem 0;
+      text-align: center;
+      box-shadow: 0px -4px 15px rgba(0, 0, 0, 0.2);
+    }
+
+    footer a {
+      color: #9b4dca;
+      text-decoration: none;
+      font-weight: 500;
+    }
+
+    footer a:hover {
+      color: #fff;
+    }
+
+    /* Responsive Design */
+    @media (max-width: 1024px) {
+      header {
+        padding: 4rem 1.5rem;
+      }
+
+      .work-section h2 {
+        font-size: 2rem;
+      }
+
+      .work-description {
+        font-size: 1.125rem;
+        width: 90%;
+      }
+
+      .work-links {
+        grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+      }
+
+      .work-links a {
+        padding: 2rem;
+      }
+    }
+
+    @media (max-width: 768px) {
+      header {
+        padding: 3rem 1rem;
+      }
+
+      header h1 {
+        font-size: 2.5rem;
+      }
+
+      header p {
+        font-size: 1.125rem;
+      }
+
+      .work-section h2 {
+        font-size: 1.75rem;
+      }
+
+      .work-description {
+        font-size: 1rem;
+        width: 95%;
+      }
+
+      .work-links {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+      }
+
+      .work-links a {
+        padding: 1.5rem;
+      }
+
+      footer {
+        padding: 2rem 0;
+      }
+
+      footer p {
+        font-size: 1rem;
+      }
+    }
+
+    /* Mobile Styling */
+    @media (max-width: 480px) {
+      header h1 {
+        font-size: 2rem;
+      }
+
+      .work-section h2 {
+        font-size: 1.5rem;
+      }
+
+      .work-description {
+        font-size: 0.95rem;
+        width: 90%;
+      }
+
+      .work-links a {
+        padding: 1.25rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Header Section -->
+  <header>
+    <h1>Welcome to My Work Showcase</h1>
+    <p>Explore my real-world projects that demonstrate my skills and passion for web development.</p>
+  </header>
+
+  <!-- Work Section -->
+  <div class="work-section">
+    <h2>My Real-World Projects</h2>
+    <p class="work-description">
+      Below are some of the projects I have worked on. These real-world applications showcase my experience in creating dynamic and functional web solutions.
+    </p>
+
+    <div class="work-links">
+      <a href="https://mohantymart.netlify.app" target="_blank">
+        <h3>MohantyMart</h3>
+        <p>A fully functional e-commerce platform offering a range of  products. Built with responsive design for a seamless shopping experience.</p>
+        <div class="check-now-btn">See it Live</div>
+      </a>
+
+      <a href="https://ganeshchitralaya.netlify.app" target="_blank">
+        <h3>Ganesh Chitralaya</h3>
+        <p>A website which prepares for Fancy dress competition. This site focuses on enhancing the user experience .</p>
+        <div class="check-now-btn">See it Live</div>
+      </a>
+
+      <a href="https://ecobill.netlify.app" target="_blank">
+        <h3>EcoBill</h3>
+        <p>EcoBill is an innovative billing system with an emphasis on sustainability, providing digital receipts and environmentally friendly features.</p>
+        <div class="check-now-btn">See it Live</div>
+      </a>
+
+
+
+      <a href="https://truflavor.netlify.app" target="_blank">
+        <h3>TruFlavor</h3>
+        <p>TruFlavor is a food Company app designed to provide the best user experience. The website is sleek, intuitive, and fully responsive.</p>
+        <div class="check-now-btn">See it Live</div>
+      </a>
+      <a href="https://brijeshh.glitch.me" target="_blank">
+        <h3>Brijesh Portfolio</h3>
+        <p>This portfolio highlights my web development skills, displaying various projects and offering detailed descriptions of my work.</p>
+        <div class="check-now-btn">See it Live</div>
+      </a>
+    </div>
+
+    <!-- Placeholder for Future Projects -->
+    <div>
+      <h3>More Coming Soon...</h3>
+      <p>Thank you for your patience.</p>
+    </div>
+  </div>
+
+  <!-- Footer Section -->
+  <footer>
+    <p>&copy; 2024 Brijesh. All Rights Reserved.</p>
+    <p>Get in touch: <a href="mailto:bmohanty1436@gmail.com">Mail me</a></p>
+  </footer>
+
+</body>
+</html>

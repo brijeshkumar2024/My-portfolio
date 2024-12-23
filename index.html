@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Brijesh's Portfolio</title>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <style>
+    /* General Styles */
+body {
+    background: linear-gradient(135deg, #1e293b, #1f1f1f);
+    color: white;
+    font-family: 'Arial', sans-serif;
+    overflow-x: hidden;
+  }
+  
+  /* Animated Background Circles */
+  .circle {
+    position: absolute;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.1);
+    animation: float 10s infinite ease-in-out;
+  }
+  
+  .circle:nth-child(1) {
+    width: 150px;
+    height: 150px;
+    top: 10%;
+    left: 20%;
+    animation-duration: 12s;
+  }
+  
+  .circle:nth-child(2) {
+    width: 100px;
+    height: 100px;
+    top: 50%;
+    left: 70%;
+    animation-duration: 8s;
+  }
+  
+  .circle:nth-child(3) {
+    width: 200px;
+    height: 200px;
+    top: 30%;
+    left: 40%;
+    animation-duration: 15s;
+  }
+  
+  @keyframes float {
+    0% {
+      transform: translateY(0px) translateX(0px);
+    }
+    50% {
+      transform: translateY(-30px) translateX(20px);
+    }
+    70% {
+      transform: translateY(-30px) translateX(20px);
+    }
+    100% {
+      transform: translateY(0px) translateX(0px);
+    }
+  }
+  
+  .welcome-text {
+    opacity: 0;
+    transform: translateY(50px);
+  }
+  
+  /* Header Section Styling */
+  header {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    text-align: center;
+  }
+  
+  header h1 {
+    font-size: 3.5rem;
+  }
+  
+  header p {
+    margin-top: 1rem;
+    font-size: 1.25rem;
+  }
+  
+  /* Button Styling */
+  header .space-x-4 {
+    margin-top: 2rem;
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+  }
+  
+  header a {
+    padding: 0.5rem 1.5rem;
+    border-radius: 9999px;
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+  }
+  
+  header a:hover {
+    opacity: 0.8;
+  }
+  
+  /* Media Queries for Mobile Devices */
+  @media (max-width: 760px) {
+    header .space-x-4 {
+      flex-direction: column;
+      gap: 1rem; /* Stack buttons vertically */
+    }
+  
+    header a {
+      width: 95%;
+      text-align: center;
+      padding: 1rem 0;
+    }
+  }
+  
+  </style>
+</head>
+<body>
+  <!-- Animated Background -->
+  <div class="circle"></div>
+  <div class="circle"></div>
+  <div class="circle"></div>
+  <div class="circle"></div>
+  <div class="circle"></div>
+  <div class="circle"></div>
+
+  <!-- Header Section -->
+  <header class="flex flex-col justify-center items-center h-screen text-center">
+    <div>
+      <h1 class="text-5xl font-bold welcome-text">Hello, I'm <span class="text-purple-500">Brijesh</span></h1>
+      <p class="mt-4 text-xl welcome-text">Ready to turn your ideas into dynamic digital experiences.</p>
+      <div class="mt-8 space-x-4">
+        <a href="about.html" class="px-6 py-2 bg-purple-500 rounded-full hover:bg-purple-900 transition welcome-text">  About Me</a>
+        <a href="w.html" class="px-6 py-2 bg-blue-500 rounded-full hover:bg-blue-900 transition welcome-text">View My Work</a>
+        <a href="a.html" class="px-6 py-2 bg-red-500 rounded-full hover:bg-red-900 transition welcome-text">Achievements</a>
+        <a href="c.html" class="px-6 py-2 bg-green-500 rounded-full hover:bg-green-900 transition welcome-text">Contact Me</a>
+        
+      </div>
+    </div>
+  </header>
+
+  <!-- Script for Animations -->
+  <script>
+    // GSAP for animations
+    gsap.fromTo(".welcome-text", 
+      { opacity: 0, y: 50 },
+      { opacity: 1, y: 0, duration: 1, stagger: 0.3 }
+    );
+  </script>
+</body>
+</html>
